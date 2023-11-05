@@ -23,6 +23,7 @@ header {
     color: #003366;
     text-align: center;
     padding: 45px 0;
+    border-radius: 10px; /* Optional: if you want rounded corners */
 }
 
 
