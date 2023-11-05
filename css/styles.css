@@ -133,6 +133,128 @@ footer {
     justify-content: space-around;
 }
 
+#location-buttons {
+    margin: 20px 0;
+}
+
+.location-button {
+    background-color: #0077b6; /* A thematic blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px; /* Rounded corners for the buttons */
+    cursor: pointer; /* Changes the cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for button hover effect */
+}
+
+.location-button:hover {
+    background-color: #005f99; /* A darker blue for the hover state */
+}
+
+/** -------------- RESULTS TABLE--------------------- **/
+/* Add CSS for the table container to limit its width */
+#results-table-container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the table container horizontally */
+}
+
+/* Add CSS for the table */
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results-table th, #results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for the header row */
+#results-table thead tr {
+    background-color: #333; /* Dark background for the header */
+    color: white; /* White text for the header */
+}
+
+/* Style for the header cells */
+#results-table th {
+    padding: 12px; /* More padding for header cells */
+    text-align: left;
+    border-bottom: 2px solid #ddd; /* Add a bottom border for the header cells */
+}
+
+/* Add CSS to set background color based on entry.id value */
+#results-table tbody tr.entry-smaller {
+    background-color: lightblue; /* Light blue background for smaller values */
+}
+
+#results-table tbody tr.entry-larger {
+    background-color: red; /* Red background for larger values */
+}
+
+/* Hover effect for table rows */
+#results-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+/** -------------- REGISTRATION --------------------- **/
+/* Apply font family from the rest of your website */
+body, input, button, select, textarea {
+    font-family: 'Your Font Family', sans-serif;
+}
+
+/* Style the form elements */
+#registration-form {
+    background-color: #f9f9f9; /* Light background for the form */
+    border: 1px solid #ddd; /* subtle border */
+    padding: 20px; /* Spacing around the content */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 400px; /* Fixed max width with centering for larger screens */
+    margin: 20px auto;
+}
+
+/* Style the input fields */
+#registration-form input[type="text"],
+#registration-form input[type="email"] {
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the fields */
+    margin-bottom: 15px; /* Space between each field */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Match border-radius */
+    /* If your design needs it, you might adjust the max-width as well */
+    /*max-width: calc(100% - 20px); !* Adjust max-width to account for potential padding/margin issues *!*/
+}
+
+/* Style the select dropdown */
+#registration-form select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the select */
+    margin-bottom: 15px; /* Space below the select */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Match border-radius */
+}
+
+/* Style the submit button */
+#registration-form button[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    background-color: #007bff; /* Use brand color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button hover effect */
+#registration-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-container {
@@ -158,52 +280,9 @@ footer {
         margin: 3px; /* Less margin to fit smaller screens better */
         font-size: 0.9em; /* Smaller font size on smaller screens */
     }
-}
-#location-buttons {
-    margin: 20px 0;
-}
 
-.location-button {
-    background-color: #0077b6; /* A thematic blue color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px; /* Rounded corners for the buttons */
-    cursor: pointer; /* Changes the cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for button hover effect */
-}
-
-.location-button:hover {
-    background-color: #005f99; /* A darker blue for the hover state */
-}
-
-
-/* Add CSS for the table container to limit its width */
-#results-table-container {
-    max-width: 800px; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center the table container horizontally */
-}
-
-/* Add CSS for the table */
-#results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-#results-table th, #results-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-
-/* Add CSS to set background color based on entry.id value */
-#results-table tbody tr.entry-smaller {
-    background-color: lightblue; /* Light blue background for smaller values */
-}
-
-#results-table tbody tr.entry-larger {
-    background-color: red; /* Red background for larger values */
+    #registration-form {
+        width: 90%; /* More width on smaller screens */
+        margin: 20px auto;
+    }
 }

@@ -56,17 +56,6 @@
         </div>
         <div id="results-table-container">
             <table id="results-table" style="display: none;">
-                <!-- Table header goes here -->
-                <thead>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
-                </tr>
-                </thead>
-                <tbody>
-                <!-- Table data will be populated dynamically using JavaScript -->
-                </tbody>
             </table>
         </div>
     </div>
@@ -77,18 +66,28 @@
         <h2 style="color:#0077b6">Register for SeaVision Pro alerts</h2>
         <p>Don't let uncertainty spoil your maritime adventures. Embrace the sea like never before with SeaVision Pro.<br>
             Sign up now, and receive an email when our algorithm indicates clear visibility for your selected spot.</p>
-        <form id="registration-form">
-            <label for="coastal-service">Select Coastal Service:</label>
-            <select id="coastal-service" name="coastal-service">
-                <option value="service1">Service 1</option>
-                <option value="service2">Service 2</option>
-                <option value="service3">Service 3</option>
-            </select>
-
-            <label for="email">Enter Your Email:</label>
+        <form id="registration-form" action="/submit-registration" method="post">
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <button type="submit">Submit</button>
+            <label for="coastal-area">Coastal area:</label>
+            <select id="coastal-area" name="service" required>
+                <option value="">--Please choose an option--</option>
+                <option value="area1">Coastal Area 1</option>
+                <option value="area2">Coastal Area 2</option>
+                <option value="area3">Coastal Area 3</option>
+                <option value="area4">Coastal Area 4</option>
+                <!-- Add other options here -->
+            </select>
+            <label for="notify-interval">Check in days:</label>
+            <select id="notify-interval" name="interval" required>
+                <option value="">--Please choose an option--</option>
+                <option value="everyday">everyday</option>
+                <option value="weekend">weekend</option>
+                <!-- Add other options here -->
+            </select>
+            <p>You will receive an email at 19:00 the day before.</p>
+            <button type="submit">Register</button>
         </form>
     </div>
 </section>

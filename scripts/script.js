@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get references to HTML elements
-    const coastalAreaSelector = document.getElementById('coastal-area-selector');
     const resultsTable = document.getElementById('results-table');
     const registrationForm = document.getElementById('registration-form');
     const resultsPlaceholder = document.getElementById('results-placeholder');
@@ -30,10 +29,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to populate the results table
     function populateTable(data) {
         resultsTable.innerHTML = ''; // Clear previous data
+        // Create and insert the header row
+        const headerRow = resultsTable.createTHead().insertRow(0);
+
+        // Insert header cells and set their titles
+        const headerUserId = headerRow.insertCell(0);
+        headerUserId.textContent = 'User ID';
+
+        const headerWaveHeight = headerRow.insertCell(1);
+        headerWaveHeight.textContent = 'Wave Height';
+
+        const headerWeather = headerRow.insertCell(2);
+        headerWeather.textContent = 'Weather';
+
+        const tableBody = resultsTable.appendChild(document.createElement('tbody'));
+
         // Create table rows with data, limiting to the first 10 entries
         for (let i = 0; i < Math.min(10, data.length); i++) {
             const entry = data[i];
-            const row = resultsTable.insertRow();
+            const row = tableBody.insertRow();
             row.insertCell(0).textContent = entry.userId;
             row.insertCell(1).textContent = `Wave Height: ${entry.id} meters`;
             row.insertCell(2).textContent = `Weather: ${entry.title}`;
@@ -64,13 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent form submission
 
         // Collect form data
-        const selectedService = document.getElementById('coastal-service').value;
+        const selectedService = document.getElementById('coastal-area').value;
         const userEmail = document.getElementById('email').value;
+        const interval = document.getElementById('notify-interval').value;
 
         // Send data to the server (replace with your server logic)
         const formData = {
             service: selectedService,
             email: userEmail,
+            interval: interval,
             // Add other form data fields as needed
         };
 
