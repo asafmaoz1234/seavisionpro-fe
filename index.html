@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaVision Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#section1">Discover</a></li>
+            <li><a href="#section2">Locations</a></li>
+            <li><a href="#section3">Register</a></li>
+        </ul>
+    </nav>
+    <h1 style="color:#0077b6">SeaVision Pro</h1>
+    <p style="color:#0077b6">Your Gateway to Crystal Clear Waters!</p>
+    <p>When it comes to experiencing the beauty and wonder of the ocean, one question stands above the rest<br>
+        <strong style="color:#0077b6">"Can I see beneath the surface?"</strong><br>
+    With SeaVision Pro, you'll never have to wonder again.</p>
+    Our cutting-edge online service is your ultimate tool for discovering the hidden treasures beneath the waves.<br>
+    Dive in, and let us show you a world you've never seen before!</p>
+</header>
+
+<section class="section-1" id="section1">
+    <div class="container text-center">
+        <h2 style="color:#0077b6">The Power of SeaVision Pro:</h2>
+        <div>
+            <p><strong style="color:#0077b6">Instant Clarity!</strong><br>
+                Wondering if that snorkeling spot is worth the trip?<br>
+               Real-time visibility reports for your chosen location, so you'll know exactly what to expect.</p>
+            <p><strong style="color:#0077b6">Plan Your Adventures!</strong><br>
+                Whether you're a diver, fisherman, or simply a lover of the sea,<br>
+                SeaVision Pro empowers you to plan your coastal activities with confidence.</p>
+            <p><strong style="color:#0077b6">State-of-the-Art Technology!</strong><br>
+                We combine advanced satellite imagery, weather data, and oceanographic insights<br>
+                Providing you with the most accurate sea visibility information available.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-expanded" id="section2">
+    <div class="container text-center">
+        <h2 style="color:#0077b6">Select Your Coastal Area</h2>
+        We are adding locations all the time!<br>
+        <div id="location-buttons">
+            <button class="location-button" value="area1">Coastal Area 1</button>
+            <button class="location-button" value="area2">Coastal Area 2</button>
+            <button class="location-button" value="area3">Coastal Area 3</button>
+            <button class="location-button" value="area4">Coastal Area 4</button>
+        </div>
+        <div id="results-placeholder">
+            <p>Select a coastal area to view results.</p>
+        </div>
+        <div id="results-table-container">
+            <table id="results-table" style="display: none;">
+                <!-- Table header goes here -->
+                <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Table data will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section-expanded" id="section3">
+    <div class="container">
+        <h2 style="color:#0077b6">Register for SeaVision Pro alerts</h2>
+        <p>Don't let uncertainty spoil your maritime adventures. Embrace the sea like never before with SeaVision Pro.<br>
+            Sign up now, and receive an email when our algorithm indicates clear visibility for your selected spot.</p>
+        <form id="registration-form">
+            <label for="coastal-service">Select Coastal Service:</label>
+            <select id="coastal-service" name="coastal-service">
+                <option value="service1">Service 1</option>
+                <option value="service2">Service 2</option>
+                <option value="service3">Service 3</option>
+            </select>
+
+            <label for="email">Enter Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About SeaVision Pro</h3>
+                <p>Empowering ocean enthusiasts and professionals <br>with unparalleled clarity into the marine world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: asaf@asafmaoz.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SeaVision Pro. All rights reserved.</p>
+        </div>
+
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

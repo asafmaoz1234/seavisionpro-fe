@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaVision Pro</title>
+    <link rel="stylesheet" href="css/stylesrevamp.css">
+</head>
+<body>
+<header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#section-1">Discover</a></li>
+            <li><a href="#section-2">Locations</a></li>
+            <li><a href="#section-3">Register</a></li>
+        </ul>
+    </nav>
+    <div class="header-container">
+        <h1>SeaVision Pro</h1>
+        <p>Your Gateway to Crystal Clear Waters!</p>
+        <p>When it comes to experiencing the beauty and wonder of the ocean, one question stands above the rest:</p>
+        <p>"Can I see beneath the surface?"</p>
+        With SeaVision Pro, you'll never have to wonder again.<br>
+        Our cutting-edge online service is your ultimate tool for discovering the hidden treasures beneath the waves.<br>
+        Dive in, and let us show you a world you've never seen before!
+    </div>
+</header>
+
+<section class="section-1" id="section-1">
+    <div class="container text-center">
+        <h2>The Power of SeaVision Pro:</h2>
+        <p><strong>Instant Clarity</strong>: Wondering if that snorkeling spot is worth the trip?<br>
+            With SeaVision Pro, you'll get real-time visibility reports for your chosen location, so you'll know exactly what to expect.</p>
+        <p><strong>Plan Your Adventures</strong>: Whether you're a diver, fisherman, or simply a lover of the sea,<br>
+            SeaVision Pro empowers you to plan your coastal activities with confidence.</p>
+        <p><strong>State-of-the-Art Technology</strong>: We combine advanced satellite imagery, weather data, and oceanographic insights<br>
+            to provide you with the most accurate sea visibility information available.</p>
+    </div>
+</section>
+
+<section class="section-2-expanded" id="section-2" style="background-image: url('/images/mid-resume-index-lrg.png');">
+    <div class="container text-center">
+        <h2>Select Your Coastal Area</h2>
+        <select id="coastal-area-selector">
+            <option value="default">Choose location</option>
+            <option value="area1">Coastal Area 1</option>
+            <option value="area2">Coastal Area 2</option>
+            <option value="area3">Coastal Area 3</option>
+            <option value="area4">Coastal Area 4</option>
+        </select>
+        <div id="results-placeholder">
+            <p>Select a coastal area to view results.</p>
+        </div>
+        <div id="results-table-container">
+            <table id="results-table" style="display: none;">
+                <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Table data will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section-3-expanded" id="section-3" style="background-image: url('/images/profile.jpeg');">
+    <div class="container">
+        <h2>Register for SeaVision Pro alerts</h2>
+        <p>Don't let uncertainty spoil your maritime adventures. Embrace the sea like never before with SeaVision Pro.<br>
+            Sign up now, and receive an email when our algorithm indicates clear disability for your selected spot.</p>
+        <form id="registration-form">
+            <label for="coastal-service">Select Coastal Service:</label>
+            <select id="coastal-service" name="coastal-service">
+                <option value="service1">Service 1</option>
+                <option value="service2">Service 2</option>
+                <option value="service3">Service 3</option>
+            </select>
+
+            <label for="email">Enter Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+    <!-- Footer content goes here -->
+    </div>
+</footer>
+
