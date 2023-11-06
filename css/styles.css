@@ -255,6 +255,61 @@ body, input, button, select, textarea {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
+/* Adjust the registration section's width and font size */
+#registration-section {
+    width: 40%; /* Adjust the width as needed to make it smaller */
+    font-size: 0.9em; /* Adjust the base font size to scale the text down */
+    margin: 0 auto; /* Keep it centered */
+}
+
+/* Adjust the form input sizes and spacing */
+#registration-section input[type="email"],
+#registration-section select {
+    width: 100%; /* Make input fields take up 100% of the form's width */
+    padding: 10px; /* Reduce padding as needed */
+    margin-bottom: 10px; /* Adjust spacing between fields */
+}
+
+/* Adjust button size */
+#registration-section input[type="submit"] {
+    padding: 10px 20px; /* Adjust padding to reduce button size */
+    font-size: 0.9em; /* Adjust font size to match the form */
+}
+
+/* If there are any labels or additional text, adjust as needed */
+#registration-section label {
+    font-size: 0.9em; /* Adjust label font size */
+    margin-bottom: 5px; /* Adjust bottom margin of labels */
+}
+/* Adjust the container of the registration if it exists */
+.registration-container {
+    padding: 15px; /* Reduce padding */
+    border-radius: 5px; /* Optional: Adjust border-radius for rounded corners */
+}
+/* Flex container for form row */
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the flex items */
+    margin-bottom: 15px; /* Space below the row */
+}
+
+/* Flex items for form columns */
+.form-col {
+    flex: 1; /* Each flex item takes equal space */
+    margin-right: 10px; /* Spacing between columns, adjust as needed */
+}
+
+/* Last column doesn't need a right margin */
+.form-col:last-child {
+    margin-right: 0;
+}
+
+/* Adjustments for select elements inside the flex columns */
+.form-col select {
+    width: 100%; /* Full width of the parent column */
+    /* Padding, border, and other styles remain the same as your current select styles */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -285,5 +340,9 @@ body, input, button, select, textarea {
     #registration-form {
         width: 90%; /* More width on smaller screens */
         margin: 20px auto;
+    }
+
+    #registration-section {
+        width: 80%; /* Increase width for smaller screens if needed */
     }
 }
