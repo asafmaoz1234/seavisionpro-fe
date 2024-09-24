@@ -1,12 +1,14 @@
 name: Deploy to S3 and invalidate cloudfront distribution
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
     types:
       - closed
-      - push
 
 jobs:
   update_website_if_merged:
