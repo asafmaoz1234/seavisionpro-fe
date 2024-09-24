@@ -2,6 +2,7 @@
 
 This repository contains the frontend code for the website [SeaVisionPro.com](https://seavisionpro.com). SeaVisionPro provides the latest underwater sea visibility conditions, helping users plan their diving and snorkeling activities. The website was built using **HTML**, **CSS**, and **JavaScript**.
 
+
 ## Table of Contents
 
 - [Overview](#overview)
