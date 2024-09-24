@@ -12,7 +12,6 @@ on:
 
 jobs:
   update_website_if_merged:
-    if: github.event.push.branch == 'main' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
