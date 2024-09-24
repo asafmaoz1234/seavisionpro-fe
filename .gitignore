@@ -1,2 +1,30 @@
-.idea
+# Ignore IntelliJ project files
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS generated files
 .DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+
+# Ignore build directories and output
+dist/
+build/
+out/
+public/
+
+# Ignore minified JavaScript files
+*.min.js
+
+# Ignore compiled CSS (if using CSS preprocessors)
+*.css.map
+*.sass-cache/
+
+# Ignore environment variables file
+.env
