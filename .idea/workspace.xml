@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdb6f4a6-687e-4fab-9bf5-a24bb5d73de2" name="Changes" comment="" />
+    <list default="true" id="bdb6f4a6-687e-4fab-9bf5-a24bb5d73de2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +36,7 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github" />
       <recent name="$PROJECT_DIR$/old-build" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/scripts" />
@@ -54,7 +57,7 @@
       <workItem from="1725823983455" duration="5877000" />
       <workItem from="1726915169702" duration="874000" />
       <workItem from="1726976658266" duration="4384000" />
-      <workItem from="1727187418591" duration="326000" />
+      <workItem from="1727187418591" duration="2793000" />
     </task>
     <servers />
   </component>
