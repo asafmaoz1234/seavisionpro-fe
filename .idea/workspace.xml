@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdb6f4a6-687e-4fab-9bf5-a24bb5d73de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coming-soon-seavision.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/stylesrevamp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/seavision-coming-soon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexrevamp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seavisionpro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Contact-us-p-500.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/easytousefeature.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/freeservicefeature.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/instantclarityfeature.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/multiregionsfeature.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indexclaude.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coming-soon-seavision.html" beforeDir="false" afterPath="$PROJECT_DIR$/coming-soon-seavision.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +29,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/asafmaoz/projects/seavisionpro/images"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/asafmaoz/projects/seavisionpro/images&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
@@ -60,6 +57,12 @@
       <option name="presentableId" value="Default" />
       <updated>1699021591342</updated>
       <workItem from="1699021592668" duration="5662000" />
+      <workItem from="1700078047019" duration="2508000" />
+      <workItem from="1700293896855" duration="60000" />
+      <workItem from="1714736772053" duration="659000" />
+      <workItem from="1725823983455" duration="5877000" />
+      <workItem from="1726915169702" duration="874000" />
+      <workItem from="1726976658266" duration="4384000" />
     </task>
     <servers />
   </component>

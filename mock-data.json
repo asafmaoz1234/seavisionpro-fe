@@ -1,0 +1,44 @@
+[
+  {
+    "date": "15/01/2024",
+    "rating": "GREAT",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  },
+  {
+    "date": "14/01/2024",
+    "rating": "GREAT",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  },
+  {
+    "date": "14/01/2024",
+    "rating": "POOR",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  },
+  {
+    "date": "14/01/2024",
+    "rating": "AVERAGE",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  },
+  {
+    "date": "14/01/2024",
+    "rating": "GREAT",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  },
+  {
+    "date": "14/01/2024",
+    "rating": "GREAT",
+    "wave_height": "0.5 Meters",
+    "water_temp": "19 Celsuis",
+    "temp": "22 Celsuis"
+  }
+]

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaVisionPro - Underwater Visibility Conditions</title>
+    <style>
+        :root {
+            --primary-color: #0077be;
+            --secondary-color: #00a86b;
+            --text-color: #333;
+            --background-color: #f0f8ff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        #hero {
+            min-height: 400px;
+            background: url('/old-build/imagesild/images/seavision-coming-soon.png') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+        }
+
+        #hero h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            background: var(--secondary-color);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: var(--primary-color);
+        }
+
+        #features {
+            margin-top: 20px;
+            padding: 20px 0;
+            overflow: hidden;
+        }
+
+        #features .features-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #features .feature {
+            flex: 1 1 25%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #features .feature img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+        }
+
+        #features .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            flex-grow: 0;
+        }
+
+        #features .feature p {
+            font-size: 14px;
+            line-height: 1.4;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main-feature {
+            padding: 30px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #main-feature h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        #region-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .region-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .region-button:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .region-button.selected {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        #check-visibility {
+            font-size: 18px;
+            padding: 12px 24px;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #contact {
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            header {
+                padding-bottom: 20px;
+            }
+
+            #hero h1 {
+                margin-top: 40px;
+            }
+
+            #features .features-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+            }
+
+            #features .feature {
+                flex: 0 0 100%;
+                scroll-snap-align: start;
+            }
+
+            #features .swipe-indicator {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            #features .swipe-indicator .dot {
+                width: 10px;
+                height: 10px;
+                background-color: #ccc;
+                border-radius: 50%;
+                margin: 0 5px;
+            }
+
+            #features .swipe-indicator .dot.active {
+                background-color: var(--primary-color);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">SeaVision</span>Pro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#main-feature">Check Visibility</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="hero">
+    <div class="container">
+        <h1>SeaVisionPro - Dive into Clarity</h1>
+        <p>When it comes to experiencing the beauty and wonder of the ocean, one question stands above the rest</p>
+        <p><strong>"Can I see beneath the surface?"</strong></p>
+        <p>Get real-time underwater visibility conditions for your next sea adventure</p>
+        <a href="#main-feature" class="button">Check Sea Visibility</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <div class="features-container">
+            <div class="feature">
+                <img src="images/instantclarityfeature.webp" alt="Instant Clarity">
+                <h3>Instant Clarity!</h3>
+                <p>Real-time visibility reports for your chosen location, so you'll know exactly what to expect.</p>
+            </div>
+            <div class="feature">
+                <img src="images/multiregionsfeature.webp" alt="Multiple Regions">
+                <h3>Multiple Regions</h3>
+                <p>Plan your coastal activities with confidence by selecting the coastal area of your planned activity.</p>
+            </div>
+            <div class="feature">
+                <img src="images/easytousefeature.webp" alt="Easy to Use">
+                <h3>Easy to Use</h3>
+                <p>Simple interface for quick checks, so you can focus on maximizing your underwater activity.</p>
+            </div>
+            <div class="feature">
+                <img src="images/freeservicefeature.webp" alt="Free Service">
+                <h3>Free Service</h3>
+                <p>No cost, just dive in!</p>
+            </div>
+        </div>
+        <div class="swipe-indicator">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<section id="main-feature">
+    <div class="container">
+        <h2>Check Sea Visibility</h2>
+        <div id="region-buttons">
+            <button class="region-button" data-region="north">North</button>
+            <button class="region-button" data-region="south">South</button>
+            <button class="region-button" data-region="center">Center</button>
+            <button class="region-button" data-region="coastal">Coastal</button>
+        </div>
+        <button id="check-visibility" class="button">Show SeaVision</button>
+        <div id="result"></div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>We value your feedback. Let us know how we can improve SeaVisionPro!</p>
+        <a href="mailto:feedback@seavisionpro.com" class="button">Send Feedback</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 SeaVisionPro. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkVisibilityBtn = document.getElementById('check-visibility');
+        const regionButtons = document.querySelectorAll('.region-button');
+        const resultDiv = document.getElementById('result');
+        let selectedRegion = '';
+
+        regionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                regionButtons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedRegion = this.dataset.region;
+            });
+        });
+
+        checkVisibilityBtn.addEventListener('click', function() {
+            if (!selectedRegion) {
+                alert('Please select a region');
+                return;
+            }
+
+            // Simulating an API call
+            fetch(`/api/visibility?region=${selectedRegion}`)
+                .then(response => response.json())
+                .then(data => {
+                    let resultText = '';
+                    let resultColor = '';
+
+                    switch(data.visibility) {
+                        case 'Great':
+                            resultText = 'Great visibility!';
+                            resultColor = '#00a86b';
+                            break;
+                        case 'Medium':
+                            resultText = 'Medium visibility';
+                            resultColor = '#ffa500';
+                            break;
+                        case 'Poor':
+                            resultText = 'Poor visibility';
+                            resultColor = '#ff4500';
+                            break;
+                        default:
+                            resultText = 'Data unavailable';
+                            resultColor = '#808080';
+                    }
+
+                    resultDiv.textContent = resultText;
+                    resultDiv.style.backgroundColor = resultColor;
+                    resultDiv.style.color = '#fff';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultDiv.textContent = 'Error fetching data';
+                    resultDiv.style.backgroundColor = '#ff0000';
+                    resultDiv.style.color = '#fff';
+                });
+        });
+
+        // ... (features section script remains the same) ...
+    });
+</script>
+</body>
+</html>
