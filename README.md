@@ -43,16 +43,22 @@ The website is hosted and deployed using **AWS Amplify**.
    After finalizing the design, **Webflow** was used to convert the design into HTML, CSS, and JavaScript code. The resulting code was optimized and modified as needed.
 
 4. **Deployment:**  
-   The frontend code is hosted on **AWS Amplify**, providing CI/CD pipelines and automatic deployment from the repository.
+   The website is hosted on **AWS S3** as a static site, with **AWS CloudFront** used as a CDN for global content delivery. Deployment is automated through a custom **GitHub Action**.
 
 ## Deployment
 
-The website is automatically deployed using **AWS Amplify**. Any new commits to the `main` branch trigger an automatic build and deploy process.
+**GitHub Action** configured to:
 
-### AWS Amplify Features:
+1. Push any changes to the S3 bucket hosting the static website.
+2. Invalidate the CloudFront cache to ensure updates are reflected globally.
 
-- **Continuous Deployment:** Automatically build and deploy changes from the `main` branch.
-- **Hosting:** The site is hosted using AWS Amplify for low-latency and global availability.
+### Deployment Workflow:
+
+- **Continuous Deployment**: Changes pushed to the `main` branch trigger the custom GitHub Action.
+- **S3 Sync**: The GitHub Action identifies modified files and pushes them to the S3 bucket.
+- **CDN Invalidation**: After syncing with S3, the CloudFront cache is invalidated to ensure new content is served to users.
+
+This setup enables efficient, low-maintenance deployment, ensuring all changes are live immediately after merging or pushing to the `main` branch.
 
 ## Local Setup
 
