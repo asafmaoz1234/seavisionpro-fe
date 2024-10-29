@@ -127,7 +127,7 @@ async function sendRequest(regionId) {
         return cachedData[regionId];
     }
     try{
-        const response = await fetch(`https://q1o859gvbj.execute-api.eu-west-1.amazonaws.com/prod/weatherData/regionId=${regionId}`);
+        const response = await fetch(`https://q1o859gvbj.execute-api.eu-west-1.amazonaws.com/prod/weatherdata?regionId=${regionId}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
