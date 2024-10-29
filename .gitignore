@@ -1,5 +1,6 @@
 # Ignore IntelliJ project files
-
+.idea
+.idea/workspace.xml
 *.iml
 
 # Logs
@@ -28,5 +29,3 @@ public/
 
 # Ignore environment variables file
 .env
-
-.idea/

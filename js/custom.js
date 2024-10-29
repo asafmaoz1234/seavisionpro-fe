@@ -122,17 +122,17 @@ function addRatingClass(element, rating) {
     }
 }
 
-async function sendRequest(coastalArea) {
-    if (cachedData[coastalArea]) {
-        return cachedData[coastalArea];
+async function sendRequest(regionId) {
+    if (cachedData[regionId]) {
+        return cachedData[regionId];
     }
     try{
-        const response = await fetch(`https://mocki.io/v1/718f4f3a-b6c5-473d-8958-7821355efaec?coastalArea=${coastalArea}`);
+        const response = await fetch(`https://q1o859gvbj.execute-api.eu-west-1.amazonaws.com/prod/weatherData/regionId=${regionId}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        cachedData[coastalArea] = data;
+        cachedData[regionId] = data;
         return data;
     }catch (error) {
         console.error('Error fetching data:', error);
