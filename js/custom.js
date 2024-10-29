@@ -99,7 +99,12 @@ function populateResultsTable(dataArray) {
                 const elementId = key + '_' +(index + 1);
                 const element = document.getElementById(elementId);
                 if (element) {
+                    // check for updateDate and convert to actual date from epoc seconds
                     element.innerHTML = data[key];
+                    if (key === 'updateDate') {
+                        const date = new Date(data[key] * 1000);
+                        element.innerHTML = date.toLocaleString();
+                    }
                     if (key === 'rating') {
                         addRatingClass(document.getElementById(key + '_cell_' + (index + 1)), data[key]);
                     }

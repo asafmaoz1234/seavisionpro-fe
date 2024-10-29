@@ -17,6 +17,16 @@ This repository contains the frontend code for the website [SeaVisionPro.com](ht
 
 SeaVisionPro offers updated predictions for underwater visibility across four regions, with conditions rated as great, medium, or poor. The data is updated daily and is completely free for users to access.
 
+## Process Flow
+Sending a Request to AWS API Gateway and Fetching Results from AWS DynamoDB
+
+1. Client Request:
+The client (browser) sends an HTTP GET request to the AWS API Gateway endpoint. 
+
+2. API Gateway:  
+AWS API Gateway receives the request and processes it according to the defined API method and resource.
+API Gateway fetches the latest visibility algorithm results from aws DynamoDB.
+
 ## Tech Stack
 
 - **HTML**
