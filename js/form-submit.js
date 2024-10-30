@@ -39,7 +39,7 @@ function handleFormSubmission() {
 
 async function sendFormData(formData) {
     try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://postman-echo.com/post', {
+        const response = await fetch('https://b093xw7y8j.execute-api.eu-west-1.amazonaws.com/prod/sendMessage', {
             method: 'POST', // Set the method to POST
             headers: {
                 'Content-Type': 'application/json' // Send as JSON

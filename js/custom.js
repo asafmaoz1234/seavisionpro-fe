@@ -132,7 +132,13 @@ async function sendRequest(regionId) {
         return cachedData[regionId];
     }
     try{
-        const response = await fetch(`https://q1o859gvbj.execute-api.eu-west-1.amazonaws.com/prod/weatherdata?regionId=${regionId.replace('region', '')}`);
+        const response = await fetch(`https://q1o859gvbj.execute-api.eu-west-1.amazonaws.com/prod/weatherdata?regionId=${regionId.replace('region', '')}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': 'operN0Dzji96CtOFlaZOW64P4LGjrvoB3YPvxhZ2'
+            }
+        });
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
