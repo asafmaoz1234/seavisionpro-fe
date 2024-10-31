@@ -23,9 +23,13 @@ function handleFormSubmission() {
     console.log("Form data submitted:", { name, email, message });
     // Prepare the form data as an object
     const formData = {
-        name: name,
-        email: email,
-        message: message
+        message: "Sender email: " + email + "message" + message,
+        messageAttributes: {
+            fromProcess: {
+                stringValue: "SeaVisionPro.com-ContactUs",
+                dataType: "String"
+            }
+        }
     };
 
     let data = sendFormData(formData);
