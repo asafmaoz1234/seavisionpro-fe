@@ -6,6 +6,7 @@ document.getElementById('wf-form-Contact-9-Form').addEventListener('submit', fun
 
 function handleFormSubmission() {
     document.getElementById("form-success").style.display = "none";
+    document.getElementById("form-success-wrapper").style.display = "none";
     document.getElementById("form-duplicate-error").style.display = "none";
     document.getElementById("form-submit-error").style.display = "none";
     document.getElementById("form-errors").style.display = "none";
@@ -37,6 +38,7 @@ function handleFormSubmission() {
     if (data === undefined) {
         return;
     }else {
+        document.getElementById("form-success-wrapper").style.display = "block";
         document.getElementById("form-success").style.display = "block";
     }
 }
