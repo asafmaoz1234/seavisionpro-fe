@@ -23,7 +23,7 @@ function handleFormSubmission() {
     console.log("Form data submitted:", { name, email, message });
     // Prepare the form data as an object
     const formData = {
-        message: "Sender email: " + email + "message" + message,
+        message: "**SENDER EMAIL** " + email + " **MESSAGE** " + message,
         messageAttributes: {
             fromProcess: {
                 stringValue: "SeaVisionPro.com-ContactUs",
@@ -53,7 +53,7 @@ async function sendFormData(formData) {
 
         // Handle the response
         if (response.ok) {
-            return await response.json(); // Assuming the response is JSON
+            return true; // Assuming the response is JSON
             // Optionally show a success message or redirect
         } else {
             // Optionally show an error message
