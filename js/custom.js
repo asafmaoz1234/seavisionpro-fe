@@ -94,12 +94,27 @@ async function fetchResults() {
 function populateResultsTable(dataArray) {
     dataArray.forEach((data, index) => {
         // Iterate over each key-value pair in the object
+        let value;
         for (const key in data) {
             if (data.hasOwnProperty(key)) {
-                const elementId = key + '_' +(index + 1);
+                const elementId = key + '_' + (index + 1);
                 const element = document.getElementById(elementId);
                 if (element) {
                     element.innerHTML = data[key];
+                    // parse temperature, averageTemperature and averageWaveHeight
+                    if (key === 'averageTemperature' || key === 'temperature' || key === 'averageWaveHeight') {
+                        if (data[key] === '0.0') {
+                            element.innerHTML = 'No Data';
+                        } else {
+                            const parts = data[key].split('.');
+                            value = parts[0] + '.' + parts[1].substring(0, 2);
+                            if (key === 'averageWaveHeight') {
+                                element.innerHTML = value + 'm';
+                            } else {
+                                element.innerHTML = value + '°C';
+                            }
+                        }
+                    }
                     // check for updateDate and convert to actual date dd/mm/yyyy from epoc seconds
                     if (key === 'updateDate') {
                         const date = new Date(data[key] * 1000);
@@ -107,9 +122,9 @@ function populateResultsTable(dataArray) {
                     }
                     if (key === 'rating') {
                         addRatingClass(document.getElementById(key + '_cell_' + (index + 1)), data[key]);
-                    }
-                    if (key === 'rating' && index === 0) {
-                        document.getElementById('results-vis-top-rating').innerHTML = 'Tomorrow Visibility Rating - ' + data[key];
+                        if (index === 0) {
+                            document.getElementById('results-vis-top-rating').innerHTML = 'Tomorrow Visibility Rating - ' + data[key];
+                        }
                     }
                 }
             }
