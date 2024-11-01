@@ -1,8 +1,11 @@
 # Ignore IntelliJ project files
 .idea
 .idea/workspace.xml
+*/workspace.xml
 *.iml
-
+/Users/asafmaoz/projects/seavisionpro/.idea/workspace.xml
+**/.idea/workspace.xml
+workspace.xml
 # Logs
 *.log
 
