@@ -81,10 +81,18 @@ async function fetchResults() {
         return;
     }
 
-
     // validate data
-    populateResultsTable(data);
+    if (!data || data.length === 0) {
+        // hide loading message
+        document.getElementById('loading-results').style.display = 'none';
+        // show results area
+        document.getElementById('results-area').style.display = 'none';
+        // show error message
+        document.getElementById('error-results').style.display = 'block';
+        return;
+    }
 
+    populateResultsTable(data);
     // hide loading message
     document.getElementById('loading-results').style.display = 'none';
     // show results area
