@@ -131,7 +131,13 @@ function populateResultsTable(dataArray) {
                     if (key === 'rating') {
                         addRatingClass(document.getElementById(key + '_cell_' + (index + 1)), data[key]);
                         if (index === 0) {
-                            document.getElementById('results-vis-top-rating').innerHTML = 'Tomorrow Visibility Rating - ' + data[key];
+                            topVisRatingElement = document.getElementById('results-vis-top-rating');
+                            if (topVisRatingElement.dir === 'rtl') {
+                                document.getElementById('results-vis-top-rating').innerHTML = 'דירוג הראות באזור החוף הנבחר - ' + data[key];
+                            } else {
+                                document.getElementById('results-vis-top-rating').innerHTML = 'Tomorrow Visibility Rating - ' + data[key];
+                            }
+
                         }
                     }
                 }
